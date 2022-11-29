@@ -11,6 +11,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './pages/header/header.component';
+import { InnerDesignComponent } from './inner-design/inner-design.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HeaderComponent } from './pages/header/header.component';
     RegisterComponent,
     IndexpageComponent,
     ContactComponent,
-    HeaderComponent
+    HeaderComponent,
+    InnerDesignComponent
   ],
   imports: [
     BrowserModule,

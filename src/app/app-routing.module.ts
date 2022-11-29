@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
+import { InnerDesignComponent } from './inner-design/inner-design.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
@@ -8,6 +9,11 @@ import { RegisterComponent } from './pages/register/register.component';
 const routes: Routes = [
   {
     path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
+    path: 'home',
     redirectTo: 'home',
     pathMatch: 'full'
   },
@@ -26,6 +32,10 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent,
+  },
+  {
+    path: 'docs',
+    component: InnerDesignComponent,
   },
   { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
 { path: 'blog', loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) },
